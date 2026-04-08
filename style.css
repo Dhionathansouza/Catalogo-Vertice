@@ -19,13 +19,16 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: linear-gradient(to bottom,#05358f, rgb(8, 22, 76));
-    
+    background-image: linear-gradient(to bottom, rgb(23, 50, 160), rgb(6, 16, 54));
+    min-height: 100vh;
 }
 header {
-    background-color: rgb(8, 22, 76);
+    background-image: radial-gradient( ellipse at top, rgba(15,60,160,1) 0%, rgba(8,22,76,1) 60%, rgba(2,10,40,1) 100% );
+    border-bottom: 2px solid #C9A84C;
     padding: 20px;
-    padding-top: 20px;
+}
+main, section , article {
+    background-color: transparent;
 }
 nav {
     padding: 10px 20px;
