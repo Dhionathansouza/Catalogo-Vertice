@@ -15,9 +15,12 @@
     --fonte01: 'Times New Roman', Times, serif;
     --fonte02: 'Passion One',cursive
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-image: linear-gradient(to bottom,#05358f, rgb(8, 22, 76));
+    
 }
 header {
     background-color: rgb(8, 22, 76);
@@ -32,22 +35,47 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: rgb(15, 38, 131);
     text-align: right;
     box-sizing: border-box;
+    border-bottom: 2px solid rgba(11, 199, 199, 0.877);
 
 }
 nav > a {
     text-decoration: none;
-    padding: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3 ease;
     color: rgba(9, 233, 233, 0.877);
     text-shadow: rgba(7, 199, 199, 0.582);
     font-size: 1.2em;
     font-weight: bold;
 }
+nav > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(9, 233, 233, 0.877);
+    transition: width 0.8s ease;
+}
+nav > a:hover::after {
+    width: 100%;
+}
+
 nav > a:hover {
-    background-color: rgba(6, 78, 78, 0.466);
+    background-color: rgba(6,78,78,0.466);
+    transform: scale(1.1);
     border-radius: 10px;
+    color: rgba(3, 240, 240, 0.699);
     
+}
+Nav >a:active {
+    transform: scale(0.95);
+    background-color: rgba(7,199,199,0.2);
+    box-shadow: 0 0 10px rgba(7,199,199,0.6);
 }
 header > h1{
     font-family: var(--fonte01);
@@ -62,6 +90,7 @@ header> p#principal {
     font-family: var(--fonte01);
     font-weight: bold;
     font-size: 1.1em;
+    line-height: 1.6;
     color: rgb(255, 255, 255);
     text-indent: 10px;
     max-width: 700px;
@@ -83,6 +112,21 @@ header> p#importante {
     color: #D4AF37;
     text-align: center;
     box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+article.pantalona {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.card {
+    text-align: center;
+}
+.card img {
+    width: 90%;
+    border-radius: 10px;
 }
 section > h1 {
     margin-top: 30px;
