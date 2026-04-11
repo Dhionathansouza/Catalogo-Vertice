@@ -214,6 +214,55 @@ article > div {
             height: 200px;
         }
     }
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.img-box img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.4s;
+
+  z-index: 2;
+}
+
+.img-box:hover img {
+  transform: scale(1.08);
+}
+
+.img-box:hover .overlay {
+  color: #032b75;
+  opacity: 1;
+}
 footer {
     background-color: #0a0a0a;
     color: #FFFFFF;
