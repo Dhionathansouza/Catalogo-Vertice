@@ -9,9 +9,9 @@
     font-family: 'Times New Roman', Times, serif;
 }
 :root {
-    --cor01: #032b75;
-    --cor02: #08164C;
-    --cor03: #90682B;
+    --cor01: rgba(15,60,160,1);
+    --cor02: rgba(2,10,40,1);
+    --cor03: #C9A84C;
     --fonte01: 'Times New Roman', Times, serif;
     --fonte02: 'Passion One',cursive
 }
@@ -19,7 +19,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: linear-gradient(to bottom, rgb(23, 50, 160), rgb(6, 16, 54));
+    background: linear-gradient(to bottom, #05215a, #041431f5);
     min-height: 100vh;
 }
 header {
@@ -136,17 +136,22 @@ section {
 }
 section > h1 {
     margin-top: 30px;
+    margin-bottom: 10px;
     margin-left: 25px;
     color: #D4AF37;
 }
 article {
-    padding: 15px;
-    display: inline-flex;
-    gap: 10px;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+
+    width: 55%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4px;
     box-sizing: border-box;
-    margin: 0;
-    background-color: rgb(8,22,76);
+    background: linear-gradient( rgba(255,255,255,0.08), rgba(255,255,255,0.02));
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.945);
 }
@@ -164,18 +169,36 @@ article > div {
     font-weight: bolder;
 }
 .card {
+    flex: 0 0 200px;
+    max-width: 220px;
+
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(201,168,76,0.3);
     border-radius: 12px;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
+    overflow: hidden;
+}
+.card:hover {
+    background-color: #03225ec9;
+    transform: scale(1.05);
+    transform: translateY(-5px);
+    transition: 0.5s;
 }
 .card img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
-    object-position: top;
+    margin: 0;
     border-radius: 10px;
+
+    transition: transform 0.4s ease;
+    cursor: pointer;
 }
     @media (min-width:769px) {
         .card img {
