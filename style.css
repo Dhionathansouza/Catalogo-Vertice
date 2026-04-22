@@ -328,11 +328,12 @@ p#instagram {
 }
 @media (max-width: 768px) {
     .produto-img{
-        height: auto;
-        object-fit: contain;
-        width: 80%;
-        margin: 0 auto;
-        display: block;
+        height: 620px;
+    }
+}
+@media (max-width: 768px) {
+    #img1 {
+        height: 540px;
     }
 }
 @media (max-width: 480px) {
