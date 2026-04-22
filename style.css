@@ -328,7 +328,7 @@ p#instagram {
 }
 @media (max-width: 768px) {
     .produto-img{
-        height: 640px;
+        height: 580px;
     }
 }
 @media (max-width: 480px) {
